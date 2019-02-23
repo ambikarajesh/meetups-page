@@ -5,12 +5,13 @@ const speakers  = require('./speakers');
 const feedback = require('./feedback');
 module.exports = (param) =>{
     const {speakersServices} = param;
-    router.get('/', async(req, res, next) =>{
-        const speakersTitle = await speakersServices.getTitle();
-        //console.log(speakersTitle)
+    router.get('/', async(req, res, next) =>{      
+        const result = await Promise.all([speakersServices.getTitle(), speakersServices.getGalleryAll()]);
+        console.log(result)
         res.render('index', {
             page:'Home',
-            speakersTitle
+            speakersTitle:result[0],
+            gallery:result[1]
         });
     })
     router.use('/speakers', speakers(param));

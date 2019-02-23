@@ -1,24 +1,16 @@
+if gallery && gallery.length      
+  aside.col-sm-4
+    article.sidebar
+      h1.sidebar-title Who should come?
+      ul.sidebar-body
+        li Anybody interested to improve tamil speaking skills
+        li who has well speaking skill in tamil, who wants to learn tamil
+        li
+          | Those interested in meeting and making a connection with others in the local.
+    // article
+    article.sidebar
+      h1.sidebar-title Gallery
+      .pixgrid.clearfix
+        each image in gallery
+          img(src=`/images/gallery/${image}`, alt=`${image}`, width='300px', height='100px')
       
-aside.col-sm-4
-  article.sidebar
-    h1.sidebar-title Who should come?
-    ul.sidebar-body
-      li Anybody interested in coding and the creative ideas
-      li Full-Stack developer, Front-End Developer
-      li
-        | Those interested in meeting and making a connection with others in the local.
-  // article
-  article.sidebar
-    h1.sidebar-title Gallery
-    .pixgrid.clearfix
-      img(src='/images/gallery/Image-1.jpg', alt='Image-1', width='300px', height='100px')
-      img(src='/images/gallery/Image-2.jpg', alt='Image-2', width='300px', height='100px')
-      img(src='/images/gallery/Image-3.jpg', alt='Image-3', width='300px', height='100px')
-      img(src='/images/gallery/Image-4.jpg', alt='Image-4', width='300px', height='100px')
-      img(src='/images/gallery/Image-5.jpg', alt='Image-5', width='300px', height='100px')
-      img(src='/images/gallery/Image-6.jpg', alt='Image-6', width='300px', height='100px')
-      img(src='/images/gallery/Image-7.jpg', alt='Image-7', width='300px', height='100px')
-      img(src='/images/gallery/Image-8.jpg', alt='Image-8', width='300px', height='100px')
-      img(src='/images/gallery/Image-9.jpg', alt='Image-9', width='300px', height='100px')
-// secondary
-// container

@@ -30,6 +30,16 @@ class SpeakerServices{
             return{name:speaker.name, shortname:speaker.shortname, title:speaker.title, summary:speaker.summary}
         })
     }
+    async getGalleryAll(){
+        const data = await this.getData();
+       const gallery = data.reduce(( acc, speaker) =>{
+           if(speaker.gallery){
+                acc = [...acc, ...speaker.gallery];
+           }     
+           return acc;      
+        }, [])
+        return gallery
+    }
 }
 
 module.exports = SpeakerServices;

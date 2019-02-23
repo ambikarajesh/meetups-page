@@ -6,11 +6,12 @@ const router = express.Router();
 module.exports = (param) => {
     const {speakersServices} = param;
     router.get('/', async(req, res, next) =>{
-        const speakerSummaries = await speakersServices.getSummary();
-        console.log(speakerSummaries)
+        const result = await Promise.all([speakersServices.getSummary(), speakersServices.getGalleryAll()]);
+        //console.log(speakerSummaries)
         return res.render('speakers', {
             page:'Speakers',
-            speakerSummaries
+            speakerSummaries:result[0],
+            gallery:result[1]
         })
     })
     router.get('/:name', (req, res, next) =>{
