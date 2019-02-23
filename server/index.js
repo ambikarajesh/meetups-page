@@ -35,7 +35,7 @@ app.use( async (req, res, next)=>{
     }
 })
 
-app.use('/', routers());
+app.use('/', routers({speakersServices}));
 
 app.get('*', function(req, res){
   res.render('error');

@@ -3,10 +3,14 @@ const express = require('express');
 const router = express.Router();
 const speakers  = require('./speakers');
 const feedback = require('./feedback');
-module.exports = () =>{
-    router.get('/', (req, res, next) =>{
+module.exports = (param) =>{
+    const {speakersServices} = param;
+    router.get('/', async(req, res, next) =>{
+        const speakersTitle = await speakersServices.getTitle();
+        console.log(speakersTitle)
         res.render('index', {
-            page:'Home'
+            page:'Home',
+            speakersTitle
         });
     })
     router.use('/speakers', speakers());

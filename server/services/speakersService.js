@@ -15,8 +15,19 @@ class SpeakerServices{
     async getName(){
         const data = await this.getData();         
         return data.map(speaker =>{
-            console.log({name:speaker.name, shortname:speaker.shortname})
-            return {name:speaker.name, shortname:speaker.shortname, title:speaker.title}
+            return {name:speaker.name, shortname:speaker.shortname}
+        })
+    }
+    async getTitle(){
+        const data = await this.getData();
+        return data.map(speaker =>{
+            return{name:speaker.name, shortname:speaker.shortname, title:speaker.title}
+        })
+    }
+    async getSummary(){
+        const data = await this.getData();
+        return data.map(speaker =>{
+            return{name:speaker.name, shortname:speaker.shortname, title:speaker.title, summary:speaker.summary}
         })
     }
 }

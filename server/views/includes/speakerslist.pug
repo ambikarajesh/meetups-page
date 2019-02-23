@@ -1,29 +1,13 @@
 article.speakerslist.jumbotron.hidden-xs
   .container
     .row
+    each speaker in speakersTitle
       .col-sm-4.text-center
-        h3.speakerslist-title React.js
+        h3.speakerslist-title=speaker.title
         h5.speakerslist-name
           | with 
-          a(href='/speakers/Ambika') Ambika
+          a(href=`/speakers/${speaker.shortname}`)=speaker.name
         p.speakerslist-info
-          a(href='/speakers/Ambika')
-            img.speakerslist-img.img-circle(src='/images/speakers/Ambika.jpg', alt='Photo of Ambika', width='300px', height='300px')
-      .col-sm-4.text-center
-        h3.speakerslist-title Node.js
-        h5.speakerslist-name
-          | with 
-          a(href='./Rajesh.html') Rajesh Kumar
-        p.speakerslist-info
-          a(href='./Rajesh.html')
-            img.speakerslist-img.img-circle(src='/images/speakers/Rajesh.jpg', alt='Photo of Rajesh',width='300px', height='300px')
-      .col-sm-4.text-center
-        h3.speakerslist-title Angular.js
-        h5.speakerslist-name
-          | with 
-          a(href='/speakers/Bharathi_Baskar') Bharathi Baskar
-        p.speakerslist-info
-          a(href='/speakers/Bharathi_Baskar')
-            img.speakerslist-img.img-circle(src='/images/speakers/Turiya.jpg', alt='Photo of Bharathi_Baskar', width='300px', height='300px')
-    // row
-    // container
+          a(href=`/speakers/${speaker.shortname}`)
+            img.speakerslist-img.img-circle(src=`/images/speakers/${speaker.shortname}.jpg`, alt=`Photo of ${speaker.shortname}`, width='300px', height='300px')
+      
