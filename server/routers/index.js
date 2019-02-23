@@ -7,14 +7,14 @@ module.exports = (param) =>{
     const {speakersServices} = param;
     router.get('/', async(req, res, next) =>{
         const speakersTitle = await speakersServices.getTitle();
-        console.log(speakersTitle)
+        //console.log(speakersTitle)
         res.render('index', {
             page:'Home',
             speakersTitle
         });
     })
-    router.use('/speakers', speakers());
-    router.use('/feedback', feedback());
+    router.use('/speakers', speakers(param));
+    router.use('/feedback', feedback(param));
     
     return router;
 }
