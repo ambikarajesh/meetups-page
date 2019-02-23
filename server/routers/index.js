@@ -5,7 +5,9 @@ const speakers  = require('./speakers');
 const feedback = require('./feedback');
 module.exports = () =>{
     router.get('/', (req, res, next) =>{
-        res.render('index');
+        res.render('index', {
+            page:'Home'
+        });
     })
     router.use('/speakers', speakers());
     router.use('/feedback', feedback());

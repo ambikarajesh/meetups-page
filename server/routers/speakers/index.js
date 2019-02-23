@@ -5,10 +5,14 @@ const router = express.Router();
 
 module.exports = () => {
     router.get('/', (req, res, next) =>{
-        return res.render('speakers')
+        return res.render('speakers', {
+            page:'Speakers'
+        })
     })
-    router.get('/speaker', (req, res, next) =>{
-        res.render('speakers/speaker')
+    router.get('/:name', (req, res, next) =>{
+        res.render('speakers/speaker', {
+            page:`${req.params.name}`
+        })
     })
     return router;
 }

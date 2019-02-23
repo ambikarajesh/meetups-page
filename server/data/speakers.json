@@ -1,0 +1,25 @@
+{
+  "speakers": [{
+    "title" : "The Dream Is Still Alive",
+    "name": "Solomon Pappaiah",
+    "shortname" : "Solomon_Pappaiah",
+    "summary" :"Solomon Pappaiah is an Indian scholar and television icon in Tamilnadu. He is a popular motivational speaker who attended many seminars, conferences, sales meetings and events to bring change in people lives. He is famous for his “Down to Earth” speaking style. In 2000 Tamilnadu government awarded him with Kalaimamani. He also appeared in two movies.",
+    "description": "<p>Born as the ninth child in a family of 12 to A. Sundaram and S. Pakkiam, Pappaiah had his job cut out as his father was a mill worker and did not have the wherewithal to financially support his studies. With financial help from his friends, he was able to continue his education. Arasu, his drawing master at the American College Higher Secondary School, taught him the skills. Professor Jothi Muthu of American College groomed his love for the language. Pappiah joined Thiagarajar College to pursue post-graduation in Tamil and became the first batch of MA Tamil students. He entered the public stage fray in 1960, when he became a teacher at The American College. Eventually, he created a social awakening in the evolution of patti mandrams. He has also written and directed plays at college.</p>",
+    "gallery": ["Image-1.jpg", "Image-2.jpg", "Image-3.jpg"]
+  },{ 
+    "title" : "The Power To Be Your Best",
+    "name": "Pattimandram Raja",
+    "shortname" : "Pattimandram_Raja",
+    "summary" : "Pattimandram Raja is a popular television personality who is known for his motivational speeches. Raja given motivational speeches on television in talk shows. He also appeared in many Tamil movies. Raja was graduated from The American College in Madurai. He given many motivational speeches in various events, seminars, conferences and business meetings.",
+    "description": "After pursuing B.com., degree in American College, Madurai, Raja studied M.A.,(Journalism and Mass communications) in Madurai Kamaraj University. Currently, he is working in United Bank of India. Raja has travelled with Solomon Pappaiah to many countries and became popular as a debate speaker. He rose to fame by the famous Pattimandram show telecasts during festival times on Sun TV. He also gave valuable current affair information through the talk shows like Vaanga Pesalam aired in Sun TV. [2] Raja has staged more than 7000+ shows across the world including United States, United Kingdom, France, Australia, Japan, Middle East, Southeast Asia, Sri Lanka.",
+    "gallery": ["Image-4.jpg", "Image-5.jpg", "Image-6.jpg"]
+   },{ 
+    "title" : "Think Big",
+    "name": "Bharathi Baskar",
+    "shortname" : "Bharathi_Baskar",
+    "summary" : "Bharathi Baskar is a famous public speaker, anchor and writer who did B.Tech in chemical engineering from Anna University. She is a popular motivational speaker of Tamilnadu who given speeches only for students to inspire them for bright future. Baskar is a vice-president in City Bank in Chennai. She also awarded with Bharati Kalai IIakkiya Virudu in 2011 by Sriram group.",
+    "description": "<p>Bharathi Baskar was born on October 25, 1969, She has completed her Post Graduation in Business Administration from Anna University. She began giving her speeches from her school days. She is a public speaker for more than ten years. Bharathi Baskar conducted many programs like “Magalir Panchayattu” and “Vaanga Pesalam” aired on Sun TV. She also wrote many short stories that were published by the Tamil Magazine “Kalki”. She also has written many motivational articles in many magazines including “Dinamani”. She also written a book named “Nee Nathi Pole Odikondiru” which was serialized by Aval Vikatan magazine. Her husband Baskar Lakshmnan is a Global CFO in TVS Logistics. Bharathi Baskar’s elder daughter is studying CA.<p/>",
+    "gallery": ["Image-7.jpg", "Image-8.jpg", "Image-9.jpg"]
+   }
+  ]
+}
