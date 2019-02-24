@@ -3,6 +3,7 @@ const path = require('path');
 const configs = require('./config');
 const routers = require('./routers');
 const SpeakersService = require('./services/speakersService');
+const FeedbackServices = require('./services/feedbackServices');
 const app = express();
 
 app.set('view engine', 'pug');
@@ -11,6 +12,7 @@ app.set('views', path.join(__dirname, './views'))
 const config = configs[app.get('env')];
 
 const speakersServices =  new SpeakersService(config.data.speakers);
+const feedbackServices = new FeedbackServices(config.data.feedback);
 app.locals.title = config.sitename;
 
 // app.use((req, res, next)=>{
@@ -35,7 +37,7 @@ app.use( async (req, res, next)=>{
     }
 })
 
-app.use('/', routers({speakersServices}));
+app.use('/', routers({speakersServices, feedbackServices}));
 
 app.get('*', function(req, res){
   res.render('error');

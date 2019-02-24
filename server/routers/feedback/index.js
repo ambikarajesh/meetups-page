@@ -3,9 +3,16 @@ const express = require('express');
 const router = express.Router();
 
 
-module.exports = () => {
-    router.get('/', (req, res, next) =>{
-        res.send('Feedback')
+module.exports = (param) => {
+    const {feedbackServices} = param;
+
+    router.get('/', async(req, res, next) =>{
+        const feedbacks = await feedbackServices.getFeedback();
+        console.log(feedbacks)
+        res.render('feedback',{
+            page:'Feedback',
+            feedbacks
+        });
     })
     
     return router;

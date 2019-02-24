@@ -7,7 +7,7 @@ module.exports = (param) =>{
     const {speakersServices} = param;
     router.get('/', async(req, res, next) =>{      
         const result = await Promise.all([speakersServices.getTitle(), speakersServices.getGalleryAll()]);
-        console.log(result)
+        //console.log(result)
         res.render('index', {
             page:'Home',
             speakersTitle:result[0],

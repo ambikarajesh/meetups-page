@@ -16,7 +16,7 @@ module.exports = (param) => {
     })
     router.get('/:name', async (req, res, next) =>{
         const speaker = await speakersServices.getSpeakerInfo(req.params.name);
-        console.log(speaker[0].title)
+        //console.log(speaker[0].title)
         res.render('speakers/speaker', {
             page:`${req.params.name}`,
             speaker:speaker[0],
