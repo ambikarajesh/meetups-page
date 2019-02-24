@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const configs = require('./config');
 const routers = require('./routers');
+const bodyParser = require('body-parser');
 const SpeakersService = require('./services/speakersService');
 const FeedbackServices = require('./services/feedbackServices');
 const app = express();
@@ -23,6 +24,7 @@ if(app.get('env') === 'development'){
     app.locals.pretty = true
 }
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended:true}));
 app.get('/favicon.ico', (req, res, next) => {
     return res.sendStatus(204);
 })
