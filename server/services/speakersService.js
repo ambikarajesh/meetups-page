@@ -40,6 +40,14 @@ class SpeakerServices{
         }, [])
         return gallery
     }
+    async getSpeakerInfo(speakerName){
+        console.log(speakerName)
+        const data = await this.getData();
+        const speaker =  data.filter(speaker =>{
+            return speaker.shortname === speakerName ? speaker:null
+        })
+        return {...speaker};
+    }
 }
 
 module.exports = SpeakerServices;

@@ -14,9 +14,13 @@ module.exports = (param) => {
             gallery:result[1]
         })
     })
-    router.get('/:name', (req, res, next) =>{
+    router.get('/:name', async (req, res, next) =>{
+        const speaker = await speakersServices.getSpeakerInfo(req.params.name);
+        console.log(speaker[0].title)
         res.render('speakers/speaker', {
-            page:`${req.params.name}`
+            page:`${req.params.name}`,
+            speaker:speaker[0],
+            gallery:speaker[0].gallery
         })
     })
     return router;

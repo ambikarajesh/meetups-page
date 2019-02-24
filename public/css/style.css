@@ -133,7 +133,7 @@ header .navbar-inverse .navbar-nav>li>a {
 }
 
 #speakerDetail .speakerslist-img {
-  margin: 20px 0;
+  margin: 0 15px -5px 0;
 }
 
 .form-control {
